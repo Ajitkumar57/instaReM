@@ -25,7 +25,6 @@ public class Ecommerce
     String driverPath = "input/chromedriver1.exe";
     public WebDriver driver ; 
     
-
         /*
          * 
 	     * openBrowser method will open browser and URL 
@@ -40,8 +39,6 @@ public class Ecommerce
         driver.manage().window().maximize();
         driver.get(baseUrl);
      }
-    
-    
         /*
 	     * The verifyHomepage method Test Case will check images are displayed on Home page 
 	     * list of these images and prints its HREF attribute.  
@@ -61,8 +58,7 @@ public class Ecommerce
 			 if (image.get(i).getAttribute("src") != null)
 			  System.out.println(image.get(i).getAttribute("src"));
          }      
-    }
-	
+    }	
 	   /*
 	    * 
 	    * The verifyBanknames method Test Case will print list of malaysia's bank name and swift codes 
@@ -86,12 +82,11 @@ public class Ecommerce
 				    System.out.println(tdElement.getText());
 		         }  		               
 	 } 
-	
-	    /*
-	     * 
-	     * After Test will quit browser once all test cases executed in the same class
-	     * 
-	     */	
+	     /*
+	      * 
+	      * After Test will quit browser once all test cases executed in the same class
+	      * 
+	      */	
 	@AfterTest
     public void terminateBrowser()
     {
