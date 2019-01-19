@@ -21,14 +21,16 @@ import org.testng.annotations.Test;
 public class Ecommerce 
 
 {
-	public String baseUrl = "https://www.amazon.in/";
+    public String baseUrl = "https://www.amazon.in/";
     String driverPath = "input/chromedriver1.exe";
     public WebDriver driver ;  
+
     /*
      * 
 	 * openBrowser method will open browser and URL 
 	 * 
 	 */
+    
     @BeforeTest
     public void openBrowser() 
     {
@@ -44,6 +46,7 @@ public class Ecommerce
 	 * list of these images and prints its HREF attribute.  
 	 *
 	 */
+    
 	@Test(priority=0)
     public void verifyHomepage() 
     {    
@@ -52,13 +55,13 @@ public class Ecommerce
         Assert.assertEquals(actualTitle, expectedTitle);
         //List of Images in the Home Page using src attribute
         List<WebElement> image=driver.findElements(By.tagName("img"));
-         System.out.println("Number of Images :"+image.size());
+        System.out.println("Number of Images :"+image.size());
 		 for(int i =0; i <image.size();i++)
 		 {	  
 			 if (image.get(i).getAttribute("src") != null)
 			  System.out.println(image.get(i).getAttribute("src"));
          }      
-  }
+    }
 	
 	 /*
 	  * 
@@ -66,49 +69,31 @@ public class Ecommerce
 	  * from the given page.
 	  * 
 	  */ 
+	
 	@Test(priority=1)
     public void verifyBanknames() throws AWTException 
     {  
-		//Robot class open new tab into the browser and getWindowHandles handles the current window 
-		Robot robot = new Robot();                          
-		robot.keyPress(KeyEvent.VK_CONTROL); 
-		robot.keyPress(KeyEvent.VK_T); 
-		robot.keyRelease(KeyEvent.VK_CONTROL); 
-		robot.keyRelease(KeyEvent.VK_T);
-		Set<String> handles = driver.getWindowHandles();
-		String currentHandle = driver.getWindowHandle();
-		    for (String handle : handles) 
-		   {
-		     if (!handle .equals(currentHandle))
-		     {
-		         driver.switchTo().window(handle);
-		         driver.get("https://www.theswiftcodes.com/malaysia/");  
-		         WebElement ele = driver.findElement(By.xpath("//table/tbody"));
-		         List<WebElement> column =driver.findElements(By.xpath(".//table/tbody/tr/td[2]"));
-		         System.out.println("----------***********-----------");
-		         System.out.println("Number Of Bank Name = "+ column .size()); 
-		    
-		               for (WebElement tdElement : column )
-			              {	
-				             System.out.println(tdElement.getText());   
-			              }  
+		driver.get("https://www.theswiftcodes.com/malaysia/");  
+		WebElement ele = driver.findElement(By.xpath("//table/tbody"));
+		List<WebElement> column =driver.findElements(By.xpath(".//table/tbody/tr/td[2]"));
+		   for (WebElement tdElement : column )
+			     {	
+				    System.out.println(tdElement.getText());   
+			     }  
 		               
-		          List<WebElement> column1 =driver.findElements(By.xpath(".//table/tbody/tr/td[5]"));
-		          System.out.println("----------***********-----------");
-		          System.out.println("Number Of Swift Code = "+ column1 .size());
-		    
-		               for (WebElement tdElement : column1 )
-			              {  
-				             System.out.println(tdElement.getText());
-		                  }  		               
-		      }      	  	     	       
-      } 
-}   	
+		List<WebElement> column1 =driver.findElements(By.xpath(".//table/tbody/tr/td[5]"));
+		   for (WebElement tdElement : column1 )
+			     {  
+				    System.out.println(tdElement.getText());
+		         }  		               
+	 } 
+	
 	/*
 	 * 
 	 * After Test will quit browser once all test cases executed in the same class
 	 * 
 	 */
+	
 	@AfterTest
     public void terminateBrowser()
     {
