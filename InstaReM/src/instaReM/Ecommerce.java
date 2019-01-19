@@ -23,14 +23,14 @@ public class Ecommerce
 {
     public String baseUrl = "https://www.amazon.in/";
     String driverPath = "input/chromedriver1.exe";
-    public WebDriver driver ;  
-
-     /*
-      * 
-	  * openBrowser method will open browser and URL 
-	  * maximize the browser.
-	  */
+    public WebDriver driver ; 
     
+
+        /*
+         * 
+	     * openBrowser method will open browser and URL 
+	     * maximize the browser.
+	     */    
     @BeforeTest
     public void openBrowser() 
     {
@@ -41,12 +41,12 @@ public class Ecommerce
         driver.get(baseUrl);
      }
     
-     /*
-	  * The verifyHomepage method Test Case will check images are displayed on Home page 
-	  * list of these images and prints its HREF attribute.  
-	  *
-	  */
     
+        /*
+	     * The verifyHomepage method Test Case will check images are displayed on Home page 
+	     * list of these images and prints its HREF attribute.  
+	     *
+	     */    
 	@Test(priority=0)
     public void verifyHomepage() 
     {    
@@ -63,13 +63,12 @@ public class Ecommerce
          }      
     }
 	
-	 /*
-	  * 
-	  * The verifyBanknames method Test Case will print list of malaysia's bank name and swift codes 
-	  * from the given page.
-	  * 
-	  */ 
-	
+	   /*
+	    * 
+	    * The verifyBanknames method Test Case will print list of malaysia's bank name and swift codes 
+	    * from the given page.
+	    * 
+	    */ 
 	@Test(priority=1)
     public void verifyBanknames() throws AWTException 
     {  
@@ -88,12 +87,11 @@ public class Ecommerce
 		         }  		               
 	 } 
 	
-	/*
-	 * 
-	 * After Test will quit browser once all test cases executed in the same class
-	 * 
-	 */
-	
+	    /*
+	     * 
+	     * After Test will quit browser once all test cases executed in the same class
+	     * 
+	     */	
 	@AfterTest
     public void terminateBrowser()
     {
