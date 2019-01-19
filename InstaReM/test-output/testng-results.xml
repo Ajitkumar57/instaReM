@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47185" started-at="2019-01-19T17:21:44Z" finished-at="2019-01-19T17:22:32Z">
+  <suite name="Default suite" duration-ms="35455" started-at="2019-01-19T18:15:37Z" finished-at="2019-01-19T18:16:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47185" started-at="2019-01-19T17:21:44Z" finished-at="2019-01-19T17:22:32Z">
+    <test name="Default test" duration-ms="35455" started-at="2019-01-19T18:15:37Z" finished-at="2019-01-19T18:16:12Z">
       <class name="instaReM.Ecommerce">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:instaReM.Ecommerce@6acdbdf5]" name="launchBrowser" is-config="true" duration-ms="10399" started-at="2019-01-19T17:21:44Z" finished-at="2019-01-19T17:21:55Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:instaReM.Ecommerce@6acdbdf5]" name="openBrowser" is-config="true" duration-ms="14689" started-at="2019-01-19T18:15:37Z" finished-at="2019-01-19T18:15:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="verifyHomepage()[pri:0, instance:instaReM.Ecommerce@6acdbdf5]" name="verifyHomepage" duration-ms="6617" started-at="2019-01-19T17:21:55Z" finished-at="2019-01-19T17:22:01Z">
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyHomepage()[pri:0, instance:instaReM.Ecommerce@6acdbdf5]" name="verifyHomepage" duration-ms="3599" started-at="2019-01-19T18:15:51Z" finished-at="2019-01-19T18:15:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepage -->
-        <test-method status="PASS" signature="verifyBanknames()[pri:1, instance:instaReM.Ecommerce@6acdbdf5]" name="verifyBanknames" duration-ms="29286" started-at="2019-01-19T17:22:01Z" finished-at="2019-01-19T17:22:31Z">
+        <test-method status="PASS" signature="verifyBanknames()[pri:1, instance:instaReM.Ecommerce@6acdbdf5]" name="verifyBanknames" duration-ms="16346" started-at="2019-01-19T18:15:55Z" finished-at="2019-01-19T18:16:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBanknames -->
-        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:instaReM.Ecommerce@6acdbdf5]" name="terminateBrowser" is-config="true" duration-ms="846" started-at="2019-01-19T17:22:31Z" finished-at="2019-01-19T17:22:32Z">
+        <test-method status="PASS" signature="terminateBrowser()[pri:0, instance:instaReM.Ecommerce@6acdbdf5]" name="terminateBrowser" is-config="true" duration-ms="781" started-at="2019-01-19T18:16:11Z" finished-at="2019-01-19T18:16:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->

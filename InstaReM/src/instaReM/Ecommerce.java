@@ -26,7 +26,7 @@ public class Ecommerce
     public WebDriver driver ;  
     /*
      * 
-	 * OpenBrowser method will open browser and URL 
+	 * openBrowser method will open browser and URL 
 	 * 
 	 */
     @BeforeTest
@@ -37,10 +37,10 @@ public class Ecommerce
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(baseUrl);
-    }
+     }
     
     /*
-	 * The verifyHomepage method test case will check images are displayed on Home page 
+	 * The verifyHomepage method Test Case will check images are displayed on Home page 
 	 * list of these images and prints its HREF attribute.  
 	 *
 	 */
@@ -50,21 +50,19 @@ public class Ecommerce
         String expectedTitle = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
-        //List of Images in the Home Page 
-        List<WebElement> listImages=driver.findElements(By.tagName("img"));
-        System.out.println("No.of Images: "+listImages.size()); 
-        List<WebElement> list=driver.findElements(By.xpath("//*[@href ]"));
-
-        for(WebElement e : list)
-        {
-            String link = e.getAttribute("href");
-            System.out.println(link);
-        }      
-    }
+        //List of Images in the Home Page using src attribute
+        List<WebElement> image=driver.findElements(By.tagName("img"));
+         System.out.println("Number of Images :"+image.size());
+		 for(int i =0; i <image.size();i++)
+		 {	  
+			 if (image.get(i).getAttribute("src") != null)
+			  System.out.println(image.get(i).getAttribute("src"));
+         }      
+  }
 	
 	 /*
 	  * 
-	  * The verifyBanknames method test case will print list of malaysia's bank name and swift codes 
+	  * The verifyBanknames method Test Case will print list of malaysia's bank name and swift codes 
 	  * from the given page.
 	  * 
 	  */ 
